@@ -13,7 +13,7 @@ def owoify():
     return text.replace("l", "w").replace("r", "w").replace("L", "W").replace("R", "W")
 
 @app.route("/hahalol", methods=['GET', 'POST'])
-def hahalol():
+def enhahalol():
     text = request.values.get("text", "")
     if text:
         return hahalol.encrypt(text)
