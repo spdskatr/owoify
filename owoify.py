@@ -17,7 +17,7 @@ def enhahalol():
     text = request.values.get("text", "")
     if text:
         return hahalol.encrypt(text)
-    return "Please provide text.", 400
+    return "Please provide text."
 
 @app.route("/dehahalol", methods=['GET', 'POST'])
 def dehahalol():
@@ -26,8 +26,8 @@ def dehahalol():
         try:
             return hahalol.decrypt(text)
         except:
-            return "Invalid text.", 400
-    return "Please provide text.", 400
+            return "Invalid text."
+    return "Please provide text."
 
 
 if __name__ == "__main__":
