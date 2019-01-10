@@ -21,7 +21,7 @@ def enhahalol():
 
 @app.route("/dehahalol", methods=['GET', 'POST'])
 def dehahalol():
-    text = request.get("text", "")
+    text = request.values.get("text", "")
     if text:
         try:
             return hahalol.decrypt(text)
